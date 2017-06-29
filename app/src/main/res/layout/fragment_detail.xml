@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="90dp"
+    android:orientation="vertical"
+    android:background="#Bf9223" >
+
+    <TextView
+        android:id="@+id/detailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:textSize="35dp"
+        android:text="Your Score:                                  "
+        android:textColor="#Bf9223"
+        android:background="@drawable/custom_text"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/Head1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="Head:"
+            android:textColor="#Bf9223"
+            />
+        <TextView
+            android:id="@+id/Tail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="Tail:"
+            android:textColor="#Bf9223"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/Head2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="Head:"
+            android:textColor="#Bf9223"
+            />
+        <TextView
+            android:id="@+id/Tail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="Tail:"
+            android:textColor="#Bf9223"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void checkScore(View v)
     {
         Context context=getApplicationContext();
-        Intent intent =new Intent(context,ScoreMainActivity.class);
+        Intent intent =new Intent(context,ListBasedFragment.class);
         startActivity(intent);
     }
     public void goToMap(View v)

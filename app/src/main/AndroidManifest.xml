@@ -40,13 +40,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DailyScoreActivity"></activity>
-        <activity android:name=".OverallScoreActivity"></activity>
-        <activity android:name=".ScoreMainActivity"></activity>
         <activity android:name=".ReflexActivity"
             android:screenOrientation="portrait"
 
             ></activity>
+        <activity android:name=".ListBasedFragment"></activity>
 
     </application>
 
