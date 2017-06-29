@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Bf9223"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_marginTop="30dp"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="180dp"
+        android:background="#Bf9223">
+        <Button
+            android:id="@+id/PlayGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:text="Start\nChallange"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="startChallange"
+            />
+        <Button
+            android:id="@+id/GetScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Your\nScores"
+            android:textSize="17dp"
+            android:foreground="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:onClick="checkScore"
+            android:layout_marginRight="20dp"
+
+            />
+        <Button
+            android:id="@+id/GoToMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Your\nLocalization"
+            android:textSize="15dp"
+            android:foreground="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:onClick="goToMap"
+            />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="120dp"
+        android:background="#Bf9223">
+
+        <Button
+            android:id="@+id/Quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/another_button"
+            android:gravity="center"
+            android:textColor="#Bf9223"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Quit"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

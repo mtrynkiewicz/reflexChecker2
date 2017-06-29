@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Bf9223"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="Check yours scores"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_text"
+        android:textColor="#Bf9223"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        />
+
+    <Button
+        android:id="@+id/DailyScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text="Daily\nScores"
+        android:layout_marginTop="20dp"
+        android:onClick="navigateToDailyScore"
+        />
+    <Button
+        android:id="@+id/OverallScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text="Overall\nScores"
+        android:layout_marginTop="20dp"
+        android:onClick="navigateToOverallScore"
+
+
+        />
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:background="@drawable/another_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text="Back"
+        android:textColor="#Bf9223"
+        android:layout_marginTop="20dp"
+        android:onClick="NavigateBack"
+
+
+        />
+
+
+</LinearLayout>
