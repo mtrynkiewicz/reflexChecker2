@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "490803172650",
+    "firebase_url": "https://reflexchecker.firebaseio.com",
+    "project_id": "reflexchecker",
+    "storage_bucket": "reflexchecker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490803172650:android:37a478ecd78d66f6",
+        "android_client_info": {
+          "package_name": "com.example.mateu.reflexchecker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490803172650-snfgd0ua7l9loa151smfcigrhq06fiu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi1bG41WTynmxO9D5Y8x1P8BI61kt5Tvs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

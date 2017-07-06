@@ -1,16 +1,26 @@
 package com.example.mateu.reflexchecker;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,11 +43,15 @@ public class ReflexActivity extends Activity implements SensorEventListener   {
     private ReflexChallangeHelpers reflexHelper;
     private CoordinateSystem coordinateSystem;
     private SingleMove singleMove;
-
+    private boolean ICanSendToDataBase;
+    private StorageReference storageReference;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser user;
 
     private boolean isAlreadyRunning;
     private int currentLevelValue=1;
     private double timeCounter=0;
+    private DatabaseReference mDatabase;
 
 
     private Random rnd ;
@@ -54,6 +68,8 @@ public class ReflexActivity extends Activity implements SensorEventListener   {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -62,14 +78,27 @@ public class ReflexActivity extends Activity implements SensorEventListener   {
         setBuilderAndManager();
         onFirstNavigate();
         isAlreadyRunning=true;
+        firebaseAuth=FirebaseAuth.getInstance();
+        storageReference= FirebaseStorage.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         //dla czujnika
+
         SM=(SensorManager)getSystemService(SENSOR_SERVICE);
         mySensor=SM.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         SM.registerListener(this,mySensor,SensorManager.SENSOR_DELAY_NORMAL);
-
+        new CheckIfUserLogIin().execute("User is Registered");
 
     }
+    private void uploadFile(String bestScore)
+    {
+        UserInformationModel user1 = new UserInformationModel("Trynio",user.getEmail(),bestScore);
 
+        mDatabase.child(user.getUid()).setValue(user1);
+        //mDatabase.child("users").child(user.getUid()).child(user.getEmail()).setValue(bestScore);
+
+        //StorageReference riversRef=storageReference.child(bestScore);
+    }
     @Override
     public void onSensorChanged(SensorEvent event) {
             if(Math.abs(event.values[0])>9 || Math.abs(event.values[1])>9)
@@ -195,7 +224,11 @@ public class ReflexActivity extends Activity implements SensorEventListener   {
             manageButton.setText("Run");
             manageButton.setTextColor(Color.parseColor("#000000"));
             breakeChallange();
+            if (user!=null)
+            {
+                uploadFile(timeValue.getText().toString());
 
+            }
             //wyslij wyniki do bazy
 
         }
@@ -250,6 +283,32 @@ public class ReflexActivity extends Activity implements SensorEventListener   {
     public void NavigateBack(View v)
     {
         finish();
+    }
+
+    private class CheckIfUserLogIin extends AsyncTask<String,Integer,String>
+    {
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Toast.makeText(ReflexActivity.this,s,Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+//
+            String toShow="User in not registered";
+                  FirebaseUser userTemp = FirebaseAuth.getInstance().getCurrentUser();
+                  if (userTemp!=null)
+                  {
+                      ICanSendToDataBase=true;
+                      user=userTemp;
+                      toShow=params[0];
+
+                  }
+
+//            }
+            return toShow;
+        }
     }
 
 

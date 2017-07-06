@@ -80,9 +80,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapClick(LatLng latLng) {
-        LatLng sydney = latLng;
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Your localization"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng localizationClick = latLng;
+        mMap.addMarker(new MarkerOptions().position(localizationClick).title("Your tapped localization"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(localizationClick));
     }
 
     private class MyLocationListener implements LocationListener {

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Bf9223"
+    >
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Registration"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/userEMail"
+        android:layout_margin="15dp"
+        android:hint="Insert your email"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_margin="15dp"
+        android:hint="Insert you password"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+
+        android:id="@+id/loginSignUp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:onClick="tryToRegisterUser"
+        android:background="@drawable/round_button"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Have an account ? Signup here"
+            android:id="@+id/textViewSignIn"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToSignIn"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            >
+
+            <Button
+                android:id="@+id/Quit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minHeight="80dp"
+                android:minWidth="80dp"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@drawable/another_button"
+                android:gravity="center"
+                android:textColor="#Bf9223"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Back To\nMenu"
+                android:onClick="goToMainView"
+                android:layout_margin="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

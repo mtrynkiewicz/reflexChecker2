@@ -24,8 +24,10 @@
         android:orientation="horizontal" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:minHeight="180dp"
-        android:background="#Bf9223">
+        android:background="#Bf9223"
+        android:layout_margin="20dp"
+
+        >
         <Button
             android:id="@+id/PlayGame"
             android:layout_width="wrap_content"
@@ -37,8 +39,7 @@
             android:textStyle="bold"
             android:textSize="17dp"
             android:text="Start\nChallange"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
             android:onClick="startChallange"
             />
         <Button
@@ -53,9 +54,8 @@
             android:text="Your\nScores"
             android:textSize="17dp"
             android:foreground="@android:color/transparent"
-            android:layout_marginTop="20dp"
             android:onClick="checkScore"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
 
             />
         <Button
@@ -70,39 +70,63 @@
             android:text="Your\nLocalization"
             android:textSize="15dp"
             android:foreground="@android:color/transparent"
-            android:layout_marginTop="20dp"
             android:onClick="goToMap"
             />
     </LinearLayout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:minHeight="120dp"
+        android:minHeight="100dp"
         android:background="#Bf9223">
+
+        <Button
+            android:id="@+id/RegisterUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Log\nin"
+            android:textSize="15dp"
+            android:foreground="@android:color/transparent"
+            android:onClick="goToRegister"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:background="#Bf9223"
+        android:minHeight="100dp"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/Quit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:minHeight="100dp"
-            android:minWidth="100dp"
-            android:fontFamily="sans-serif-condensed"
             android:background="@drawable/another_button"
+            android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:textColor="#Bf9223"
-            android:textStyle="bold"
-            android:textSize="20dp"
+            android:minHeight="80dp"
+            android:minWidth="80dp"
             android:text="Quit"
-            android:layout_marginTop="20dp"
+            android:textColor="#Bf9223"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
             />
 
 
-
-        </LinearLayout>
-
-
+    </LinearLayout>
 
 
 </LinearLayout>

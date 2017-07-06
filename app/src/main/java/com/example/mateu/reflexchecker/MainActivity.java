@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     public void startChallange(View v)
     {
@@ -32,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
         Context context=getApplicationContext();
         Intent intent =new Intent(context,MapsActivity.class);
         startActivity(intent);
+    }
+    public void goToRegister(View v)
+    {
+        Context context=getApplicationContext();
+        Intent intent =new Intent(context,RegisterActivity.class);
+        startActivity(intent);
+
+
     }
 
 

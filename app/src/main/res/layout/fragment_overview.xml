@@ -9,9 +9,9 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Daily\nScores"
+        android:text="User"
         android:layout_marginTop="20dp"
-
+        android:layout_margin="10dp"
         android:background="@drawable/round_button"
         />
 
@@ -19,8 +19,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Overall\nScores"
+        android:text="Scores"
         android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+
         android:background="@drawable/round_button"
 
         />

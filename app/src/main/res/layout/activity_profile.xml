@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Bf9223"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/textViewUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+
+        />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextFirstName"
+        android:hint="Enter your full name"
+        android:layout_margin="10dp"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSurname"
+        android:hint="Enter your full name"
+        android:layout_margin="10dp"
+
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/round_button"
+            android:textStyle="bold"
+            android:text="Save"
+            android:textSize="17dp"
+            android:foreground="@android:color/transparent"
+            android:onClick="checkScore"
+            android:layout_margin="10dp"
+
+
+            />
+        <Button
+
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="@drawable/round_button"
+            android:layout_margin="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+
+        <Button
+            android:id="@+id/Quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="80dp"
+            android:minWidth="80dp"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/another_button"
+            android:gravity="center"
+            android:textColor="#Bf9223"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Back To\nMenu"
+            android:layout_margin="20dp"
+            android:onClick="goToMainView"
+
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
